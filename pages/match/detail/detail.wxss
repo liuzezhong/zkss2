@@ -1,0 +1,223 @@
+/* pages/detail/detail.wxss */
+
+.header-view {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.header-image {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.title-line {
+  width: 750rpx;
+  height: 130rpx;
+  background: rgba(255, 255, 255, 1);
+}
+
+.tel-icon {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.first-line {
+  margin-left: 30rpx;
+  padding-top: 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+.telphone-line {
+  margin-left: 30rpx;
+  padding-top: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.title-text {
+  font-size: 32rpx;
+  color: #333;
+  width: 400rpx;
+}
+
+.report-text {
+  font-size: 26rpx;
+  color: #9e9e9e;
+  width: 290rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.number-text {
+  color: #ff6a00;
+}
+
+.tel-text {
+  font-size: 26rpx;
+  padding-left: 5rpx;
+}
+
+.detail-line {
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 220rpx;
+  background: rgba(255, 255, 255, 1);
+}
+
+.info-line {
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+}
+
+.more-image {
+  width: 15rpx;
+  height: 25rpx;
+}
+
+.user-header {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+
+.detail-text {
+  font-size: 26rpx;
+  color: #787878;
+}
+
+.detail-view {
+  margin-left: 30rpx;
+}
+
+.detail-dizhi {
+  padding-top: 22rpx;
+}
+
+.detail-riqi {
+  padding-top: 15rpx;
+}
+
+.detail-qixian {
+  padding-top: 15rpx;
+}
+
+.detail-title {
+  color: #333;
+}
+
+.info-text {
+  font-size: 26rpx;
+  color: #787878;
+}
+
+.info-view {
+  margin-left: 30rpx;
+}
+
+.info-zhuban {
+  padding-top: 15rpx;
+}
+
+.info-chengban {
+  padding-top: 15rpx;
+}
+
+.info-mudi {
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-right: 30rpx;
+}
+
+.have-line {
+  margin-top: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-text {
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  width: 500rpx;
+}
+
+.have-text {
+  font-size: 26rpx;
+}
+
+.right-text {
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.more-text {
+  font-size: 26rpx;
+  color: #B8B8B8;
+  padding-right: 5rpx;
+}
+
+.userheader {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.button-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.share-button {
+  width: 200rpx;
+  height: 96rpx;
+}
+
+.report-button {
+  width: 550rpx;
+  height: 96rpx;
+  
+}
+
+.share {
+  background-color:white;
+  border-radius:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+	bottom: 0;
+  width: 200rpx;
+
+}
+
+.report {
+  background-color:#D93A00;
+  color: white;
+  border-radius:0px;
+  position: fixed;
+	bottom: 0;
+   width: 550rpx;
+}
+
+button::after {
+  border-radius:0px;
+  border:0px;
+}
+
+.fenxiang-image {
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.white-space {
+  height: 100rpx;
+  width: 100%;
+}

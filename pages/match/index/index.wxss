@@ -1,0 +1,186 @@
+/**index.wxss**/
+
+.search-line {
+  width: 750rpx;
+  height: 98rpx;
+  background: rgba(240, 240, 245, 1);
+  display: flex;
+  align-items: center;
+}
+
+.kind-select {
+  margin-left: 30rpx;
+  width: 154rpx;
+}
+
+.jiantouxia-image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.chazhao-image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.kind-select-text {
+  color: #575757;
+  font-size: 28rpx;
+}
+
+.search-view {
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+  width: 500rpx;
+  height: 65rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-image {
+  width: 65rpx;
+  height: 65rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: 24rpx;
+}
+
+.activity-line {
+  margin-top: 10rpx;
+}
+
+.header-line {
+  width: 750rpx;
+  height: 94rpx;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+}
+
+.image-view {
+  width: 450rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+.header-image {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 100%;
+}
+
+.big-image {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.image-line {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.zhuban-text {
+  font-size: 32rpx;
+  padding-left: 15rpx;
+  color: #333;
+}
+
+.fabutime-text {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.image-right {
+  width: 225rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.detail-line {
+  width: 750rpx;
+  height: 125rpx;
+  background-color: white;
+}
+
+.detail-view {
+  margin-left: 32rpx;
+  marker: 20rpx;
+}
+
+.title-line {
+  
+  padding-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.title-text {
+  padding-left: 5rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.report-text {
+  color: #575757;
+  font-size: 24rpx;
+}
+
+.number-text {
+  color: #FF6A00;
+  font-size: 24rpx;
+}
+
+.shijian-image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.second-line {
+  
+  padding-top: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.begain-time {
+  color: #575757;
+  font-size: 22rpx;
+  padding-left: 10rpx;
+}
+
+.dizhi-view {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.dizhi-text {
+  font-size: 24rpx;
+  color: #333;
+  padding-left: 5rpx;
+}
+
+.info-view {
+  display: flex;
+  align-items: center;
+}
+
+.kaibi-image {
+  width: 35rpx;
+  height: 35rpx;
+}

@@ -1,0 +1,35 @@
+<!--pages/mine/grxx/grxx.wxml-->
+<view class="container">
+  <view class="header-line">
+    <image class="icon" src="../../../image/geren.png"></image>
+    <text class="line-title">个人信息</text>
+    <text class="button-text bianji-text" bindtap="checkUserInfo">编辑</text>
+  </view>
+  <view class="info-line" bindtap="checkUserInfo">
+    <block wx:if="{{userInfo.real_name == null}}">
+      <text class="info-text" style='color:#e64340'>未绑定个人信息，点击绑定</text>
+    </block>
+    <block wx:else>
+      <text class="info-text">{{userInfo.real_name}}</text>
+    <text class="info-text tel-number">{{userInfo.phone_number}}</text>
+    <image class="gengduo-icon" src="../../../image/jiantouyou.png"></image>
+    </block>
+    
+  </view>
+
+  <view class="header-line">
+    <image class="icon" src="../../../image/geren.png"></image>
+    <text class="line-title">团队信息</text>
+    <text class="button-text chuangjian-text" bindtap="createTeam">创建</text>
+    <text class="button-text guanli-text">管理</text>
+  </view>
+
+  <block wx:for="{{teams}}">
+    <view class="info-line" bindtap="teamInfo" data-team_id="{{item.team_id}}">
+    <text class="number-text">{{key}}</text>
+    <text class="info-text-team">{{item.team_name}}</text>
+    <image class="gengduo-icon-team" src="../../../image/jiantouyou.png"></image>
+  </view>
+  <view class="fen-line"></view>
+  </block>
+</view>

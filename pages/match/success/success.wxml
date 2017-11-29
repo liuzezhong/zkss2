@@ -1,0 +1,18 @@
+<!--pages/success/success.wxml-->
+<view class="container">
+  <view class="icon-view">
+    <icon type="success" size="100" color="#D93A00"></icon>
+  </view>
+  <view class="title-view">
+    <text class="title">报名成功</text>
+  </view>
+  <view class="message-view">
+    <text class="message">您已成功报名，点击下方按钮即可查看报名信息</text>
+  </view>
+  <view class="first-button">
+    <button class="info" bindtap="goRegister">查看报名信息</button>
+  </view>
+  <view class="second-button">
+    <button bindtap="goBack">返回赛事列表</button>
+  </view>
+</view>

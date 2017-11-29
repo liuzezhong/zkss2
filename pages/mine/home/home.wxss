@@ -1,0 +1,103 @@
+/* pages/mine/home/home.wxss */
+
+.header {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.header-image {
+  padding-top: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.user-header {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+}
+
+.user-button-header {
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: -27rpx;
+}
+
+.user-button {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  border: 0;
+}
+
+button[plain] {
+  border: 0px;
+  background-color: transparent;
+}
+
+button::after {
+  border: 0;
+}
+
+.header-nickname {
+  padding-top: 15rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.user-nickname {
+  color: white;
+  font-size: 32rpx;
+}
+
+.main {
+  width: 100%;
+  background-color: white;
+}
+
+.line {
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-image {
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.more-image {
+  width: 12rpx;
+  height: 22rpx;
+}
+
+.icon {
+  margin-left: 35rpx;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  margin-left: 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+.more {
+  margin-left: 477rpx;
+  display: flex;
+  align-items: center;
+}
+
+.name-text {
+  font-size: 32rpx;
+  color: #575757;
+}
+
+.fen-line {
+  height: 1rpx;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+

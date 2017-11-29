@@ -1,0 +1,11 @@
+/* pages/circle/circle.wxss */
+
+
+text {
+  font-size: 32rpx;
+  color: #b2b2b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+}

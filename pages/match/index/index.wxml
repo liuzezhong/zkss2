@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search-line">
+    <view class="kind-select">
+      <text class="kind-select-text">全部活动</text>
+      <image class="jiantouxia-image" src="/image/jiantouxia.png"></image>
+    </view>
+    <view class="search-view">
+      <view class="search-image">
+        <image class="chazhao-image" src="/image/chazhao.png"></image>
+      </view>
+      <view class="">
+        <input placeholder="活动搜索" confirm-type="search"></input>
+      </view>
+    </view>
+  </view>
+  <block wx:for="{{matchList}}" wx:key="*this">
+    <view class="activity-line" data-matchid="{{item.match_id}}" bindtap="detail">
+      <view class="header-line">
+        <view class="image-view">
+          <image class="header-image" mode="aspectFill" src="{{item.image_url}}"></image>
+          <text class="zhuban-text">{{item.match_title}}</text>
+        </view>
+        <view class="image-right">
+          <text class="fabutime-text">{{item.gmt_create}}</text>
+        </view>
+      </view>
+      <view class="image-line">
+        <image class="big-image" mode="aspectFill" src="{{item.image_url}}"></image>
+      </view>
+      <view class="detail-line">
+        <view class="title-line">
+          <view class="info-view">
+            <image class="kaibi-image" src="/image/kaibi.png"></image>
+            <text class="title-text">{{item.match_kb}}</text>
+          </view>
+          <view class="info-view">
+            <image class="kaibi-image" src="/image/ss.png"></image>
+            <text class="title-text">{{item.event_name}}</text>
+          </view>
+          <view class="info-view">
+            <image class="kaibi-image" src="/image/chakan.png"></image>
+            <text class="title-text">{{item.view_times}}</text>
+          </view>
+          <view class="info-view">
+            <image class="kaibi-image" src="/image/wd.png"></image>
+            <text class="title-text"><text class="number-text">{{item.countRegister}}</text>人</text>
+          </view>
+        </view>
+        <view class="second-line">
+          <view class="info-view">
+            <image class="shijian-image" src="/image/shijian.png"></image>
+            <text class="title-text">{{item.match_stime}}</text>
+          </view>
+          <view class="dizhi-view">
+            <image class="shijian-image" src="/image/dizhi.png"></image>
+            <text class="dizhi-text">{{item.address}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

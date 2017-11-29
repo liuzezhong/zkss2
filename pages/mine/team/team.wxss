@@ -1,0 +1,81 @@
+/* pages/mine/team/team.wxss */
+
+.input-line {
+  
+  width: 750rpx;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.margin-line {
+  margin-top: 30rpx;
+}
+.title-view {
+  margin-left: 30rpx;
+  width: 170rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #3D3D3D;
+}
+
+.input-placeholder {
+  font-size: 34rpx;
+  color: #b2b2b2;
+}
+
+input {
+  font-size: 34rpx;
+}
+
+.info-view {
+  margin-top: 30rpx;
+}
+
+.fen-line {
+  height: 1rpx;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+
+button {
+  width: 700rpx;
+  background: #D93A00;
+  border-radius: 5px;
+  color: white;
+}
+
+.save-button {
+  margin-top: 30rpx;
+}
+
+.add-view {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.add {
+  font-size: 24rpx;
+  color: #576b95;
+}
+
+.sex-picker {
+  display: flex;
+  align-items: center;
+}
+
+.modifiy {
+ 
+  font-size: 24rpx;
+  color: #b2b2b2;
+
+}

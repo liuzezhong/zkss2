@@ -1,0 +1,96 @@
+/* pages/mine/edituser/edituser.wxss */
+
+.line {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.name-line {
+  margin-top: 50rpx;
+}
+
+.title-view {
+  margin-left: 30rpx;
+  width: 170rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #3D3D3D;
+}
+
+.input-placeholder {
+  font-size: 34rpx;
+  color: #b2b2b2;
+}
+
+input {
+  font-size: 34rpx;
+}
+
+.textarea-line {
+  width: 750rpx;
+  height: 150rpx;
+  background-color: white;
+  margin-top: 50rpx;
+  padding-top: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.textarea-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+textarea {
+  font-size: 34rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.more {
+  margin-left: 10rpx;
+  width: 17rpx;
+  height: 27rpx;
+}
+
+.sex-picker {
+  display: flex;
+  align-items: center;
+}
+
+.fen-line {
+  height: 1rpx;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+
+.tel-line {
+  margin-top: 50rpx;
+}
+
+.sex-line {
+  margin-top: 50rpx;
+}
+
+button {
+  width: 700rpx;
+  background: #D93A00;
+  border-radius: 5px;
+  color: white;
+}
+
+.save-button {
+  margin-top: 75rpx;
+}

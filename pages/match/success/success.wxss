@@ -1,0 +1,51 @@
+/* pages/success/success.wxss */
+
+.icon-view {
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.title-view {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: #000;
+  font-size: 60rpx;
+}
+
+.message-view {
+  margin-top: 45rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.first-button {
+  margin-top: 60rpx;
+}
+
+.second-button {
+  margin-top: 30rpx;
+}
+
+button {
+  width: 690rpx;
+}
+
+.info {
+  background-color: #D93A00;
+  border: 0;
+  color: white;
+}
+
+button::after{
+  border: 0;
+}

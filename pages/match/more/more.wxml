@@ -1,0 +1,22 @@
+<!--pages/match/more/more.wxml-->
+<view class="container">
+  <view class="main">
+    <block wx:for="{{registers}}" wx:key="*this">
+      <view class="line">
+      <view class="header">
+        <image src="{{item.user.avatarurl}}"></image>
+      </view>
+      <view class="nickname">
+        <text class="name">{{item.user.nickname}}</text>
+      </view>
+      <view class="register">
+        <text class="info">{{item.gmt_create}} {{item.category.category_name}}</text>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+    </block>
+  </view>
+  <view class="footer">
+    <text class="no-more">没有更多了</text>
+  </view>
+</view>

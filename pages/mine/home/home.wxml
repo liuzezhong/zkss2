@@ -1,0 +1,117 @@
+<!--pages/mine/home/home.wxml-->
+<view class="container">
+  <view class="header" style="background-image: url(http://weapp.zhongkaiyun.com/public/image/tasks/headerbg.png);">
+    <view class="header-image">
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <button plain="true" class="user-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image class="user-button-header" src="../../../image/headerno.png"></image>
+        </button>
+        
+      </block>
+      <block wx:else>
+        <image class="user-header" src="{{userInfo.avatarUrl}}"></image>
+      </block>
+
+    </view>
+    <view class="header-nickname">
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <text class="user-nickname">点击头像登陆</text>
+      </block>
+      <block wx:else>
+        
+        <text class="user-nickname">{{userInfo.nickName}}</text>
+
+      </block>
+
+    </view>
+  </view>
+
+  <view class="main">
+
+    <view class="line" bindtap="navPage" data-url="grxx">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/grxx.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">个人信息</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+
+    <!-- <view class="line" bindtap="navPage" data-url="wdyd">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/wdyd.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">我的运动</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view> -->
+    <view class="line" bindtap="navPage" data-url="wdss">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/wdbs.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">我的比赛</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+    <!-- <view class="line">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/wdgz.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">我的关注</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+    <view class="line">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/wdfs.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">我的粉丝</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+    <view class="line">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/wdsx.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">我的私信</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view>
+    <view class="line">
+      <view class="icon">
+        <image class="icon-image" src="../../../image/yjfk.png"></image>
+      </view>
+      <view class="name">
+        <text class="name-text">意见反馈</text>
+      </view>
+      <view class="more">
+        <image class="more-image" src="../../../image/jiantouyou.png"></image>
+      </view>
+    </view>
+    <view class="fen-line"></view> -->
+  </view>
+</view>

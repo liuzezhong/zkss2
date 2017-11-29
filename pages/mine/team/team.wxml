@@ -1,0 +1,115 @@
+<!--pages/mine/team/team.wxml-->
+
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="input-line margin-line">
+      <view class="title-view">
+        <text class="title">团队名称</text>
+      </view>
+      <view class="input-view">
+        <input placeholder="请输入团队名称" placeholder-class="input-placeholder" name="team_name" type="text" value="{{teamInfo.team_name}}" disabled="{{disabled}}"></input>
+      </view>
+    </view>
+
+    <view class="info-view">
+      <view class="input-line">
+        <view class="title-view">
+          <text class="title">队长姓名</text>
+        </view>
+        <view class="input-view">
+          <input placeholder="请输入队长姓名" placeholder-class="input-placeholder" name="leader_name" type="text" value="{{teamInfo.leader.real_name}}" disabled="{{disabled}}"></input>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="input-line">
+        <view class="title-view">
+          <text class="title">身份证号</text>
+        </view>
+        <view class="input-view">
+          <input placeholder="请输入身份证号码" placeholder-class="input-placeholder" name="leader_idcard" type="idcard" value="{{teamInfo.leader.id_card}}" disabled="{{disabled}}"></input>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="input-line">
+        <view class="title-view">
+          <text class="title">性别</text>
+        </view>
+        <picker bindchange="bindleaderSexPickerChange" value="{{sexIndex}}" range="{{sexArray}}" name="leader_sex" disabled="{{disabled}}">
+          <view class="sex-picker">
+            <text class="title">{{sexArray[sexIndex]}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="input-line">
+        <view class="title-view">
+          <text class="title">手机号码</text>
+        </view>
+        <view class="input-view">
+          <input placeholder="请输入手机号码" placeholder-class="input-placeholder" name="leader_phone" type="number" value="{{teamInfo.leader.phone_number}}" disabled="{{disabled}}"></input>
+        </view>
+      </view>
+    </view>
+
+    <block wx:for="{{memberArray}}" wx:key="*this">
+      <view class="info-view">
+        <view class="input-line">
+          <view class="title-view">
+            <text class="title">队员姓名</text>
+          </view>
+          <view class="input-view">
+            <input placeholder="请输入队员姓名" placeholder-class="input-placeholder" name="real_name{{item}}" type="text" value="{{newTeamUser[index].real_name}}" disabled="{{disabled}}"></input>
+          </view>
+        </view>
+        <view class="fen-line"></view>
+
+        <view class="input-line">
+          <view class="title-view">
+            <text class="title">身份证号</text>
+          </view>
+          <view class="input-view">
+            <input placeholder="请输入身份证号码" placeholder-class="input-placeholder" name="id_card{{item}}" type="idcard" value="{{newTeamUser[index].id_card}}" disabled="{{disabled}}"></input>
+          </view>
+        </view>
+        <view class="fen-line"></view>
+
+        <view class="input-line">
+          <view class="title-view">
+            <text class="title">性别</text>
+          </view>
+          <picker bindchange="bindMemberSexPickerChange" value="{{sexIndexArray[item-1]}}" range="{{sexArray}}" name="real_sex{{item}}" data-item="{{item}}" disabled="{{disabled}}">
+            <view class="sex-picker">
+              <text class="title">{{sexArray[sexIndexArray[item-1]]}}</text>
+            </view>
+          </picker>
+        </view>
+        <view class="fen-line"></view>
+
+        <view class="input-line">
+          <view class="title-view">
+            <text class="title">手机号码</text>
+          </view>
+          <view class="input-view">
+            <input placeholder="请输入手机号码" placeholder-class="input-placeholder" name="phone_number{{item}}" type="number" value="{{newTeamUser[index].phone_number}}" disabled="{{disabled}}"></input>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{is_info == 0}}">
+      <view class="add-view" bindtap="addMember">
+        <text class="add">再加一个队员</text>
+      </view>
+      <view class="save-button">
+        <button formType="submit">保存</button>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="add-view">
+        <text class="modifiy">如需修改以上信息，请前往个人中心页面</text>
+      </view>
+    </block>
+  </form>
+</view>

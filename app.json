@@ -1,0 +1,68 @@
+{
+  "pages":[
+    
+    "pages/match/index/index",
+    "pages/match/sign/sign",
+    "pages/mine/home/home",
+    "pages/mine/team/team",
+    "pages/rank/rank",
+    "pages/match/more/more",
+    "pages/mine/enrol/enrol",
+    "pages/mine/wdss/wdss",
+    "pages/mine/grxx/grxx",
+    "pages/circle/circle",
+    "pages/mine/edituser/edituser",
+    
+    
+    "pages/match/detail/detail",
+    "pages/match/success/success"
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#D93A00",
+    "navigationBarTitleText": "中铠街区赛事",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#9E9E9E",
+    "selectedColor": "#D93A00",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      { 
+        "iconPath": "image/ss.png",
+        "selectedIconPath": "image/ssx.png",
+        "pagePath": "pages/match/index/index",
+        "text": "赛事活动"
+      },
+      {
+        "iconPath": "image/phb.png",
+        "selectedIconPath": "image/phbx.png",
+        "pagePath": "pages/rank/rank",
+        "text": "排行榜"
+      },
+      {
+        "iconPath": "image/qz.png",
+        "selectedIconPath": "image/qzx.png",
+        "pagePath": "pages/circle/circle",
+        "text": "圈子"
+      },
+      {
+        "iconPath": "image/wd.png",
+        "selectedIconPath": "image/wdx.png",
+        "pagePath": "pages/mine/home/home",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

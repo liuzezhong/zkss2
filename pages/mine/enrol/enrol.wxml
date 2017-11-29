@@ -1,0 +1,228 @@
+<!--pages/sign/sign.wxml-->
+<view class="container">
+  <view class="match-main">
+    <view class="text-line">
+      <view class="dian">
+      </view>
+      <view class="title">
+        <text class="title-text">比赛名称</text>
+      </view>
+      <view class="value">
+        <text class="value-text">{{match.match_title}}</text>
+      </view>
+    </view>
+
+    <view class="text-line">
+      <view class="dian">
+      </view>
+      <view class="title">
+        <text class="title-text">参赛项目</text>
+      </view>
+      <view class="value">
+        <text class="value-text">{{category.category_name}}</text>
+      </view>
+    </view>
+
+    <view class="text-line">
+      <view class="dian">
+      </view>
+      <view class="title">
+        <text class="title-text">比赛地址</text>
+      </view>
+      <view class="value">
+        <text class="value-text">{{match.address}}</text>
+      </view>
+    </view>
+
+    <view class="text-line">
+      <view class="dian">
+      </view>
+      <view class="title">
+        <text class="title-text">比赛时间</text>
+      </view>
+      <view class="value">
+        <text class="value-text">{{match.match_stime}}</text>
+      </view>
+    </view>
+
+    <view class="text-line">
+      <view class="dian">
+      </view>
+      <view class="title">
+        <text class="title-text">参赛费用</text>
+      </view>
+      <view class="value">
+        <text class="value-text">{{category.money}}</text>
+
+        <!-- <text class="pay_status unpay">未支付</text> -->
+      </view>
+    </view>
+  </view>
+
+  <view class="fenge-line">
+    <view class="first-line">
+      <text class="infotitle-text">比赛报名信息</text>
+    </view>
+    <view class="second-line">
+      <text class="tishi-text">请在比赛现场出示二维码签到</text>
+    </view>
+    <view class="sign-view">
+      <image class="sign-image" src="{{register.sign_qrcode}}"></image>
+    </view>
+    <view class="second-line">
+      <block wx:if="{{register.gmt_sign == null}}">
+        <text class="tishi-text" style="color:#e64340">未签到</text>
+      </block>
+      <block wx:else>
+        <text class="tishi-text" style="color:#09bb07">签到时间：{{register.gmt_sign}}</text>
+      </block>
+    </view>
+  </view>
+
+  <block wx:if="{{is_team == 0}}">
+    <view class="userinfo-main">
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">真实姓名</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{userInfo.real_name}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">真实性别</text>
+        </view>
+        <view class="info-value">
+          <block wx:if="{{userInfo.real_sex == 1}}">
+            <text class="info-value-text">男</text>
+          </block>
+          <block wx:elif="{{userInfo.real_sex == 2}}">
+            <text class="info-value-text">女</text>
+          </block>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">身份证号</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{userInfo.id_card}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">手机号码</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{userInfo.phone_number}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{is_team == 1}}">
+    <view class="userinfo-main">
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">团队名称</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{teamInfo.team_name}}</text>
+        </view>
+      </view>
+
+      <view class="info-line margin-top">
+        <view class="info-title">
+          <text class="info-title-text">队长姓名</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{teamInfo.leader.real_name}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">身份证号</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{teamInfo.leader.id_card}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">性别</text>
+        </view>
+        <view class="info-value">
+          <block wx:if="{{teamInfo.leader.real_sex == 1}}">
+            <text class="info-value-text">男</text>
+          </block>
+          <block wx:elif="{{teamInfo.leader.real_sex == 2}}">
+            <text class="info-value-text">女</text>
+          </block>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">手机号码</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{teamInfo.leader.phone_number}}</text>
+        </view>
+      </view>
+
+
+      <block wx:for="{{teamInfo.user}}"> 
+        <view class="info-line margin-top">
+        <view class="info-title">
+          <text class="info-title-text">队员姓名</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{item.real_name}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">身份证号</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{item.id_card}}</text>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">性别</text>
+        </view>
+        <view class="info-value">
+          <block wx:if="{{item.real_sex == 1}}">
+            <text class="info-value-text">男</text>
+          </block>
+          <block wx:elif="{{item.real_sex == 2}}">
+            <text class="info-value-text">女</text>
+          </block>
+        </view>
+      </view>
+      <view class="fen-line"></view>
+      <view class="info-line">
+        <view class="info-title">
+          <text class="info-title-text">手机号码</text>
+        </view>
+        <view class="info-value">
+          <text class="info-value-text">{{item.phone_number}}</text>
+        </view>
+      </view>
+      </block>
+
+    </view>
+  </block>
+
+</view>

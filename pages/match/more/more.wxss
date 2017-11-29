@@ -1,0 +1,51 @@
+/* pages/match/more/more.wxss */
+
+.line {
+  width: 100%;
+  height: 120rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  margin-left: 30rpx;
+}
+
+image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+}
+
+.nickname {
+  margin-left: 20rpx;
+  width: 250rpx;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #575757;
+}
+
+.info {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.footer {
+  margin-top: 35rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.no-more {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+
+.fen-line {
+  height: 1rpx;
+  width: 100%;
+  background-color: #e9e9e9;
+}

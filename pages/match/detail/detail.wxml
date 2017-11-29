@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="header-view">
+    <swiper autoplay="true" interval="5000" duration="500">
+      <block wx:for="{{images}}" wx:key="*this">
+        <swiper-item>
+        <image class="header-image" mode="aspectFill" src="{{item.image_url}}"></image>        
+      </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="title-line">
+    <view class="first-line">
+      <text class="title-text">{{match.match_title}}</text>
+      <text class="report-text">已报名<text class="number-text">{{countRegister}}</text>／总名额<text class="number-text">{{match.headcount}}</text></text>
+    </view>
+    <view class="telphone-line">
+      <image class="tel-icon" src="/image/shouji.png"></image>
+      <text class="tel-text">咨询热线： {{match.leader}}   {{match.leader_tel}}</text>
+    </view>
+  </view>
+
+  <view class="detail-line">
+    <view class="detail-view detail-dizhi"><text class="detail-text"><text class="detail-title">比赛地址：</text>{{match.address}}</text></view>
+    <view class="detail-view detail-riqi"><text class="detail-text"><text class="detail-title">比赛日期：</text>{{match.match_stime}}  开始</text></view>
+    <view class="detail-view detail-qixian"><text class="detail-text"><text class="detail-title">报名期限：</text>{{match.enrol_etime}}  截止 </text></view>
+  </view>
+
+  <view class="info-line">
+    <view class="info-view info-zhuban"><text class="info-text"><text class="detail-title">主办方：</text>{{match.sponsor}}</text></view>
+    <view class="info-view info-chengban"><text class="info-text"><text class="detail-title">承办方：</text>{{match.undertake}}</text></view>
+    <view class="info-view info-mudi"><text class="info-text"><text class="detail-title">比赛目的：</text>{{match.match_detail}}</text></view>
+  </view>
+
+  <view class="have-line" bindtap="moreRegister" data-match_id="{{match.match_id}}">
+    <view class="left-text">
+      <text class="have-text">已报名（{{countRegister}}）</text>
+    </view>
+    <view class="right-text">
+      <text class="more-text">更多报名</text>
+      <image class="more-image" src="/image/jiantouyou.png"></image>
+    </view>
+  </view>
+
+  <view class="userheader" bindtap="moreRegister" data-match_id="{{match.match_id}}">
+    <block wx:for="{{registerUserInfo}}" wx:key="*this">
+      <image class="user-header" src="{{item.avatarurl}}"></image>
+    </block>
+  </view>
+  <view class="white-space"></view>
+  <view class="button-line">
+    <view class="share-button">
+      <button class="share" open-type="share">
+        <image class="fenxiang-image" src="/image/fenxiang.png"></image>
+      </button>
+    </view>
+    <view class="report-button">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{categoryName}}">
+        <button class="report">我要报名</button>
+      </picker>
+    </view>
+  </view>
+</view>
